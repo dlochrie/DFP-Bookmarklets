@@ -41,10 +41,9 @@ aps.loadCommon = function() {
 }
 
 aps.loadStyles = function() {
-	var css = document.createElement("link");
-	css.setAttribute("rel", "stylesheet");
+	var css = document.createElement("style");
 	css.setAttribute("type", "text/css");
-	css.setAttribute("href", aps.scriptPath + "style.css");
+	css.setAttribute("src", aps.scriptPath + "style.css");
 	document.getElementsByTagName("head")[0].appendChild(css);
 }
 
