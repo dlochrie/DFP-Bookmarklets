@@ -14,6 +14,55 @@ aps.undefinedAds = [];
 aps.calledAdsLinks = [];
 aps.undefinedAdsLinks = [];
 
+aps.css = '#bkmrklt-report-wrapper {'
++  'background-color:#FFFFFF;'
++  'color:#000000;'
++ 'display:block;'
++  'margin:0px;'
++  'padding:0px;'
++  'width:100%;'
++  '}'
++  '#bkmrklt-report-wrapper,'
++  'div.bookmarklet-wrapper {'
++  'font-family: "Arial", "Helvetica", Serif;'
++ '}'
++  '#bkmrklt-report-wrapper h1{'
++  'font-size: 120%;'
++  '}'
++  '#bkmrklt-report-wrapper td,'
++  '#bkmrklt-report-wrapper th {'
++  'background-color:#EEEEEE;'
++  'border:1px dotted #333333;'
++  'padding:3px;'
++  'vertical-align:top;'
++  '}'
++  'div.bookmarklet-wrapper {'
++  'background-color:#000000;'
++  'border:1px dotted #FFFFFF;'
++  'margin-bottom: 2px;'
++  'padding:20px;'
++  '}'
++  'div.bookmarklet-wrapper ul {'
++  'margin: 3px;'
++  '}'
++  'div.bookmarklet-wrapper ul li {'
++  'list-style-type: square;'
++  'margin-left: 15px;'
++  '}'
++  '#bkmrklt-table {'
++  'margin: 10px;'
++  'padding: 10px;'
++  '}'
++  '#bkmrklt-table a:link,'
++  '#bkmrklt-table a:visited,'
++  '#bkmrklt-table a:hover {'
++  'color:#0000CC;'
++  '}'
++  '#bkmrklt-table th {' 
++  'color: #CC0000;' 
++  'font-weight: bold;'
++  '}';
+
 aps.getSlots = function() {
 	var scripts = document.getElementsByTagName('script');
 	var re = /hearstPlaceAd\( ?['|"](\w+)/;
@@ -95,7 +144,8 @@ aps.addRow = function(key, value) {
 aps.getDebugReport = function() {
 	var wrapper = document.createElement("div");
 	wrapper.id = 'bkmrklt-report-wrapper';
-	var body = '<h1>Debug Bookmarklet Report</h1>'
+	var body = aps.css 
+		+ '<h1>Debug Bookmarklet Report</h1>'
 		+ '<table id="bkmrklt-table">'
 		+ aps.getURLData()
 		+ aps.getAdUnit()
