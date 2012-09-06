@@ -21,8 +21,10 @@ div.bookmarklet-wrapper {
 	vertical-align:top;
 }
 div.bookmarklet-wrapper {
+	background-color:#000000;
 	border:1px dotted #FFFFFF;
 	margin-bottom: 2px;
+	padding:20px;
 }
 div.bookmarklet-wrapper ul {
 	margin: 3px;

@@ -44,7 +44,7 @@ aps.loadStyles = function() {
 	var css = document.createElement("link");
 	css.setAttribute("rel", "stylesheet");
 	css.setAttribute("type", "text/css");
-	css.setAttribute("href", scriptPath + "style.css");
+	css.setAttribute("href", aps.scriptPath + "style.css");
 	document.getElementsByTagName("head")[0].appendChild(css);
 }
 
