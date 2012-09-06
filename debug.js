@@ -36,7 +36,7 @@ if (aps.y) {
 
 var url = window.location.href;
 var urlParts = url.split('/');
-var path = parts[urlParts.length -1] = '';
+var path = urlParts[urlParts.length -1] = '';
 
 var js = path + 'lib.js'; 
 var script = document.createElement('script');
