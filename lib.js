@@ -1,8 +1,7 @@
 /**
  * @author Daniel Lochrie
- * daniel.lochrie@chron.com
  * 
- * debug.common.js
+ * lib.js
  * This file contains the common library for the
  * Juice Bookmarklets
  */
