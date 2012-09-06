@@ -51,7 +51,7 @@ if (aps.y) {
 	alert('This site is using Yahoo! APT. Google DFP was not found.');
 } else if(aps.g) {
 	aps.loadCommon();
-	aps.loadStyles();
+	//aps.loadStyles();
 } else {
 	alert('No known Ad Network was Found. This site is not using Yahoo APT or DFP Premium.');
 }
