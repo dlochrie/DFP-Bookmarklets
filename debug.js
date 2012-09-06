@@ -10,6 +10,12 @@ var aps = {};
 aps.y = null;
 aps.g = null;
 
+/**
+ * Modify the path to suit your needs.
+ * GitHib might not be the best place to host this.
+ */
+aps.scriptPath = 'https://raw.github.com/dlochrie/DFP-Bookmarklets/master/';
+
 console.log('Checking for Ad-Network (Yahoo):');
 try {
 	aps.y = yld_mgr || null;
@@ -27,28 +33,27 @@ try {
 }
 
 if (aps.y) {
-	// Explain Yahoo was found.
+	alert('This site is using Yahoo! APT. Google DFP was not found.');
 } else if(aps.g) {
-	// Explain Google was found, exec common code.
+	aps.loadCommon();
+	aps.loadStyles();
 } else {
-	// Explain no Ad-Network was found.
+	alert('No known Ad Network was Found. This site is not using Yahoo APT or DFP Premium.');
 }
 
-/**
- * var url = window.location.href;
- * var urlParts = url.split('/');
- * var path = urlParts[urlParts.length -1] = '';
-*/
+aps.loadCommon = function() {
+	var js = aps.scriptPath + 'lib.js'; 
+	var script = document.createElement('script');
+	script.setAttribute('type', 'text/javascript');
+	script.setAttribute('src', js);
+	document.getElementsByTagName('head')[0].appendChild(script);
+}
 
-/**
- * Modify the path to suit your needs.
- */
-var path = 'https://raw.github.com/dlochrie/DFP-Bookmarklets/master/';
-
-var js = path + 'lib.js'; 
-var script = document.createElement('script');
-script.setAttribute('type', 'text/javascript');
-script.setAttribute('src', js);
-document.getElementsByTagName('head')[0].appendChild(script);
-
+aps.loadStyles = function() {
+	var css = document.createElement("link");
+	css.setAttribute("rel", "stylesheet");
+	css.setAttribute("type", "text/css");
+	css.setAttribute("href", scriptPath + "style.css");
+	document.getElementsByTagName("head")[0].appendChild(css);
+}
 
