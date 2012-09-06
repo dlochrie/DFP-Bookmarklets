@@ -1,3 +1,11 @@
+/**
+ * @author Daniel Lochrie
+ * 
+ * debug.js
+ * This file determines what ad-network is loaded on the page, and 
+ * calls `lib.js` if DFP is found.
+ */
+
 var aps = {};
 aps.y = null;
 aps.g = null;
