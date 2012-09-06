@@ -34,9 +34,16 @@ if (aps.y) {
 	// Explain no Ad-Network was found.
 }
 
-var url = window.location.href;
-var urlParts = url.split('/');
-var path = urlParts[urlParts.length -1] = '';
+/**
+ * var url = window.location.href;
+ * var urlParts = url.split('/');
+ * var path = urlParts[urlParts.length -1] = '';
+*/
+
+/**
+ * Modify the path to suit your needs.
+ */
+var path = 'https://raw.github.com/dlochrie/DFP-Bookmarklets/master/';
 
 var js = path + 'lib.js'; 
 var script = document.createElement('script');
