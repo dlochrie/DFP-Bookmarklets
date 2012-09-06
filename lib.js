@@ -14,7 +14,8 @@ aps.undefinedAds = [];
 aps.calledAdsLinks = [];
 aps.undefinedAdsLinks = [];
 
-aps.css = '#bkmrklt-report-wrapper {'
+aps.css = '<style type="text/css">'
++ '#bkmrklt-report-wrapper {'
 +  'background-color:#FFFFFF;'
 +  'color:#000000;'
 + 'display:block;'
@@ -61,7 +62,8 @@ aps.css = '#bkmrklt-report-wrapper {'
 +  '#bkmrklt-table th {' 
 +  'color: #CC0000;' 
 +  'font-weight: bold;'
-+  '}';
++  '}'
++  '</style>';
 
 aps.getSlots = function() {
 	var scripts = document.getElementsByTagName('script');
